@@ -1,0 +1,18 @@
+window_sizes 1912 990 450 1455 781 144
+
+diagrams
+  active  classdiagram_ref 128002 // baggage
+    1463 781 100 A3-Landscape 0 0
+end
+show_stereotypes
+selected operation_ref 129282 // compietion
+open
+  operation_ref 128386 // number
+  operation_ref 128258 // cheak
+  classrelation_ref 128258 // <unidirectional association>
+  class_ref 128258 // ManagerControl
+  operation_ref 128898 // number
+  operation_ref 129282 // compietion
+  class_ref 135042 // Dispaly
+end
+end

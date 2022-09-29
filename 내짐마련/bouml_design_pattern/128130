@@ -1,0 +1,331 @@
+format 218
+"model01" // Baggage::model01
+  revision 2
+  modified_by 2 "¼ÒÇö"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128002 "cv_model"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128002 "baggage"
+      classdiagramsettings member_max_width 0 end
+      size A3-Landscape
+    end
+
+    class 128002 "Center"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}interface ${name}${extends} {
+${members}}
+"
+      php_decl "${comment}interface ${name}${extends} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128002 "content"
+	public explicit_return_type "char"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128386 "number"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128258 "cheak"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128514 "compietion"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128130 "ClientControl"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128258 // <unidirectional association>
+	relation 128258 --->
+	  a role_name "" private
+	    classrelation_ref 128258 // <unidirectional association>
+	  b parent class_ref 128002 // Center
+      end
+
+      attribute 128002 "content"
+	private explicit_type "char"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128130 "startnumber"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128258 "ManagerControl"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128386 // <unidirectional association>
+	relation 128386 --->
+	  a role_name "" private
+	    classrelation_ref 128386 // <unidirectional association>
+	  b parent class_ref 128002 // Center
+      end
+
+      attribute 128258 "finishnumber"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128386 "completion"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128514 "check"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128386 "ClientCenter"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135042 // <realization>
+	relation 135042 -_-|>
+	  a public
+	    classrelation_ref 135042 // <realization>
+	  b parent class_ref 128002 // Center
+      end
+
+      operation 129026 "content"
+	public explicit_return_type "char"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128898 "number"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 135298 // <unidirectional association>
+	relation 135298 --->
+	  a role_name "" private
+	    classrelation_ref 135298 // <unidirectional association>
+	  b parent class_ref 135042 // Dispaly
+      end
+    end
+
+    class 134914 "ManagerCenter"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135170 // <realization>
+	relation 135170 -_-|>
+	  a public
+	    classrelation_ref 135170 // <realization>
+	  b parent class_ref 128002 // Center
+      end
+
+      operation 129410 "number"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 129154 "cheak"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 129282 "compietion"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 135426 // <unidirectional association>
+	relation 135426 --->
+	  a role_name "" private
+	    classrelation_ref 135426 // <unidirectional association>
+	  b parent class_ref 135042 // Dispaly
+      end
+    end
+
+    class 135042 "Dispaly"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128770 "display"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128002 "dv_model"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+  end
+end
